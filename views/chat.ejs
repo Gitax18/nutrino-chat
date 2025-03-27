@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat App</title>
+    <style>
+      h1 {
+        text-align: center;
+        color: #28a745;
+      }
+
+      .chat-container {
+        width: 80%;
+        max-width: 700px;
+        min-width: 280px;
+        margin: auto;
+        border: 1px solid #ddd;
+        padding: 10px;
+      }
+      .messages {
+        height: 60vh;
+        overflow-y: scroll;
+        padding: 1rem auto;
+        display: flex;
+        flex-direction: column;
+        font-size: 1.2rem;
+      }
+      .message {
+        list-style: none;
+        padding: 5px 10px;
+        margin: 5px 0;
+        border-radius: 5px;
+        max-width: 80%;
+      }
+      .sender {
+        background-color: #dcf8c6;
+        text-align: right;
+        align-self: flex-end;
+      }
+      .receiver {
+        background-color: #f1f1f1;
+        text-align: left;
+        align-self: flex-start;
+      }
+      .message-form {
+        display: flex;
+        margin-top: 10px;
+      }
+      .message-input {
+        flex: 1;
+        padding: 10px;
+        font-size: inherit;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      .send-button {
+        margin-left: 5px;
+        font-size: inherit;
+        padding: 5px 10px;
+        border: none;
+        background: #28a745;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Chat with Nutrino~Mistral</h1>
+
+    <div class="chat-container">
+      <ul class="messages">
+        <% messages.forEach(message => { %> <% if (message.role === "user") { %>
+        <li class="message sender"><%- message.content %></li>
+        <% } else if (message.role === "assistant") { %>
+        <li class="message receiver"><%- message.content %></li>
+        <% } %> <% }) %>
+      </ul>
+
+      <form action="/message" method="POST" class="message-form">
+        <input
+          type="text"
+          name="message"
+          class="message-input"
+          placeholder="Type your message..."
+          required
+        />
+        <button type="submit" class="send-button">Send</button>
+      </form>
+    </div>
+  </body>
+</html>
