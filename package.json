@@ -1,0 +1,28 @@
+{
+  "name": "ollama_practice",
+  "version": "1.0.0",
+  "description": "testing ollama capabilities",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "AI",
+    "genAI",
+    "ollama",
+    "REST_API"
+  ],
+  "author": "Gitanshu Sankhla",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "dotenv": "^16.4.7",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "groq-sdk": "^0.17.0",
+    "marked": "^15.0.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
