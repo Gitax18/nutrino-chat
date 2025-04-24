@@ -11,7 +11,7 @@ const data = [
   {
     role: "assistant",
     content:
-      "Hi I am Nutrino Mistral, so what have you eat today? Should I help you to track intake calories.",
+      "Hi I am Nutrino chat, so what have you eat today? Should I help you to track intake calories.",
   },
 ];
 
