@@ -1,7 +1,7 @@
 {
-  "name": "ollama_practice",
+  "name": "Nutrino_chat",
   "version": "1.0.0",
-  "description": "testing ollama capabilities",
+  "description": "Nutrino Chat is an AI-based personal dietitian chat application, helping users to achieve their health goals.",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
